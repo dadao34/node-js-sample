@@ -18,7 +18,6 @@ jobs:
     steps:
       # Checkout the code as the first step.
       - checkout
-      - setup_remote_docker
       - run:
           name: "show directory"
           command: ls
