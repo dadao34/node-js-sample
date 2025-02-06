@@ -18,9 +18,19 @@ jobs:
     steps:
       # Checkout the code as the first step.
       - checkout
+       
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+          name: "build"
+          command: docker build -t getting-started .
+
+      - run:
+          name: "run"
+          command: docker run -p 3000:8080 getting-started
+
+      - run:
+          name: "test"
+          command: curl localhost:8080
+  
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
