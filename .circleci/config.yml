@@ -36,11 +36,7 @@ jobs:
 
       - run:
           name: "Connect to dockerHub"
-          command: docker login -u dadao34
-  
-      - run:
-          name: "Connect to dockerHub"
-          command: docker login -u dadao34 
+          command: echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USERNAME
   
   
 
