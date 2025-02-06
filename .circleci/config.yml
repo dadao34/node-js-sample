@@ -18,7 +18,7 @@ jobs:
     steps:
       # Checkout the code as the first step.
       - checkout
-      - setup-remote-docker
+      - setup_remote_docker
 
       - run:
           name: "build"
