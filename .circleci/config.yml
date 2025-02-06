@@ -5,4 +5,7 @@ workflows:
   build-and-publish-docker-image:
     jobs:
       - docker/publish:
-          image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+          image: $DOCKER_HUB_USERNAME/oui  
+          tag: ouiTest
+          docker-password: DOCKER_HUB_PASSWORD
+          docker-username: DOCKER_HUB_USERNAME
