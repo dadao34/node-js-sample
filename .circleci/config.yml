@@ -33,6 +33,15 @@ jobs:
       - run:
           name: "test"
           command: curl --silent --head http://localhost:3000
+
+      - run:
+          name: "Connect to dockerHub"
+          command: docker login -u dadao34
+  
+      - run:
+          name: "Connect to dockerHub"
+          command: docker login -u dadao34 
+  
   
 
 # Orchestrate jobs using workflows
