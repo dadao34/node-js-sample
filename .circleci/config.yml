@@ -35,6 +35,10 @@ jobs:
           command: curl --silent --head http://localhost:3000
 
       - run:
+          name: "Print env variables"
+          command: echo ${DOCKER_HUB_PASSWORD}
+
+      - run:
           name: "Connect to dockerHub"
           command: echo ${DOCKER_HUB_PASSWORD} | docker login -u ${DOCKER_HUB_USERNAME}
   
